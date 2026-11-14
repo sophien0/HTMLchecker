@@ -27,4 +27,20 @@ public class HTMLManager {
  public Quene<HTMLTAG> getTags() {
       return tags;
    }
+ //create a toSting method  
+ public String toString() {
+      String result = "";
+      
+      int size = tags.size();
+         
+         //the for loop go through all the element in the queue
+         for(int i = 0; i < size; i++) {
+         HTMLTag tag = tags.remove();
+         //use trim() to remove extra space
+         result += tag.toString().trim();
+         //add the element back to the riginal queue
+         tags.add(tag);
+         }
+
+ }
 }
