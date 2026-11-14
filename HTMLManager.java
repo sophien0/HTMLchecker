@@ -4,17 +4,17 @@ public class HTMLManager {
   private Queue<HTMLTag> tags;
   
 //the constructor takes in a Queue of HTMLTags that make up an HTML page
-  HTMLManager(Quene<HTMLTag> html) {
+  public HTMLManager(Queue<HTMLTag> html) {
   //if the Queue passed is null, the constructor throws an IllegalArgumentException
    if(html == null) {
-      throw new IllegalArgumentExpecption();
+      throw new IllegalArgumentException();
    }
    //store the passed information in its Queue field
    tags = new LinkedList<HTMLTag>();
    
    int size = html.size();
    //copy all the values into a new (queue) field
-   for(int = 0; i < size; i++) {
+   for(int i = 0; i < size; i++) {
       //remove all from the original queue
       HTMLTag tag = html.remove();
       
@@ -24,7 +24,7 @@ public class HTMLManager {
    }
  }
  //Returns the queue of HTMLTags being managed
- public Quene<HTMLTAG> getTags() {
+ public Queue<HTMLTag> getTags() {
       return tags;
    }
  //create a toSting method  
@@ -41,6 +41,8 @@ public class HTMLManager {
          //add the element back to the riginal queue
          tags.add(tag);
          }
+         
+      return result;
 
  }
 }
