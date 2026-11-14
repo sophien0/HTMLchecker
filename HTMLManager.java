@@ -11,6 +11,16 @@ public class HTMLManager {
    }
    //store the passed information in its Queue field
    tags = new LinkedList<HTMLTag>();
-
-}
+   
+   int size = html.size();
+   //copy all the values into a new (queue) field
+   for(int = 0; i < size; i++) {
+      //remove all from the original queue
+      HTMLTag tag = html.remove();
+      
+      //add them back to the queue(back to original order)
+      tags.add(tag);
+      tags.add(tag);
+   }
+ }
 }
