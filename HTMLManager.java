@@ -23,4 +23,8 @@ public class HTMLManager {
       tags.add(tag);
    }
  }
+ //Returns the queue of HTMLTags being managed
+ public Quene<HTMLTAG> getTags() {
+      return tags;
+   }
 }
