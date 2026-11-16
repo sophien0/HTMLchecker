@@ -44,8 +44,17 @@ public class HTMLManager {
             while(!open.isEmpty() && !open.peek().matches(tag)) {
                tags.add(open.pop().getMatching());
             }
+            if (!open.isEmpty()) {
+               tags.add(tag);
+               open.pop();
+            }
          }
          }
+         
+         while (!open.isEmpty()) {
+            tags.add(open.pop().getMatching());
+         }
+       
       }
        
 }
