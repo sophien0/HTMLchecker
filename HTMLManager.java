@@ -40,7 +40,11 @@ public class HTMLManager {
          } else if (tag.isOpening()) {
             tags.add(tag);
             open.push(tag);
-         } 
+         } else {
+            while(!open.isEmpty() && !open.peek().matches(tag)) {
+               tags.add(open.pop().getMatching());
+            }
+         }
          }
       }
        
